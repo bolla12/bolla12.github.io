@@ -3,22 +3,195 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>cornercaseqalabs.com — Coming Soon</title>
+    <title>Cornercase QA Labs — QA Services & Dashboard</title>
+    <meta name="description" content="Cornercase QA Labs — software QA services, test orchestration, reporting and automation." />
     <style>
-      body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0f172a;color:#e6eef8}
-      .card{max-width:760px;padding:40px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));box-shadow:0 8px 30px rgba(2,6,23,0.6);text-align:center}
-      a { color:#7dd3fc }
-      h1{margin:0 0 10px;font-size:28px}
-      p{margin:0 0 16px;color:#cbd5e1}
-      footer{margin-top:18px;font-size:14px;color:#94a3b8}
+      :root{--bg:#0b1220;--card:#091023;--muted:#9aa7bf;--accent:#7dd3fc;--glass:rgba(255,255,255,0.03)}
+      *{box-sizing:border-box}
+      body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#071027 0%,#071523 100%);color:#e6eef8;line-height:1.4}
+      .container{max-width:1100px;margin:36px auto;padding:20px}
+      header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+      .brand{display:flex;align-items:center;gap:12px}
+      .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#0ea5a4,#7dd3fc);display:flex;align-items:center;justify-content:center;color:#052026;font-weight:700}
+      h1{font-size:20px;margin:0}
+      p.lead{color:var(--muted);margin:4px 0 0}
+      nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+      .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:26px}
+      .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+      .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+      .service{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px}
+      .service h3{margin:0 0 6px;font-size:15px}
+      .service p{margin:0;color:var(--muted);font-size:13px}
+      .cta{margin-top:16px}
+      button.primary{background:var(--accent);border:none;padding:10px 14px;border-radius:8px;color:#04202a;font-weight:600;cursor:pointer}
+      .status{display:flex;flex-direction:column;gap:12px}
+      .status .row{display:flex;align-items:center;justify-content:space-between}
+      .badge{padding:6px 10px;border-radius:999px;background:rgba(125,211,252,0.12);color:var(--accent);font-weight:600}
+      .small{font-size:13px;color:var(--muted)}
+      .progress{height:8px;background:rgba(255,255,255,0.04);border-radius:6px;overflow:hidden}
+      .progress > i{display:block;height:100%;background:linear-gradient(90deg,#34d399,#7dd3fc);width:0%;transition:width 300ms}
+      footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+      /* responsive */
+      @media (max-width:880px){.grid{grid-template-columns:1fr;}.brand h1{font-size:18px}}
+      /* simple modal/contact */
+      .modal{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:none;align-items:center;justify-content:center}
+      .modal .dialog{width:420px;background:var(--card);border-radius:12px;padding:18px}
+      .row-input{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+      input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
     </style>
   </head>
   <body>
-    <div class="card">
-      <h1>cornercaseqalabs.com</h1>
-      <p>Coming soon — site is being prepared. If you are the owner, check the repository at <a href="https://github.com/bolla12/bolla12.github.io">bolla12/bolla12.github.io</a>.</p>
-      <p>If you need to reach the maintainer: <a href="https://github.com/bolla12">@bolla12</a></p>
-      <footer>Custom domain: cornercaseqalabs.com</footer>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">CC</div>
+          <div>
+            <h1>Cornercase QA Labs</h1>
+            <p class="lead">Quality engineering services, automation, and reporting</p>
+          </div>
+        </div>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#contact" id="contactLink">Contact</a>
+        </nav>
+      </header>
+
+      <div class="grid">
+        <main class="card">
+          <section id="hero">
+            <h2 style="margin-top:0">Managed QA services and automation</h2>
+            <p class="small">We run tests, collect results, and provide dashboards and actionable reports. Use the demo "Run Smoke" to simulate a test execution below.</p>
+
+            <div style="margin-top:18px" class="services">
+              <div class="service">
+                <h3>Test Automation</h3>
+                <p>Playwright / Selenium / Cypress pipelines that run on push and schedule.</p>
+              </div>
+              <div class="service">
+                <h3>Test Reporting</h3>
+                <p>Aggregated reports, screenshots, and fail traces delivered per-run.</p>
+              </div>
+              <div class="service">
+                <h3>CI Integration</h3>
+                <p>GitHub Actions and webhooks to run tests from PRs and on demand.</p>
+              </div>
+              <div class="service">
+                <h3>Consulting</h3>
+                <p>Custom frameworks, flakiness reduction, and test strategy workshops.</p>
+              </div>
+            </div>
+
+            <div class="cta">
+              <button class="primary" id="runBtn">Run Smoke (demo)</button>
+              <span style="margin-left:12px;color:var(--muted);font-size:13px">or <a href="#contact" style="color:var(--accent)">request a quote</a></span>
+            </div>
+
+            <section id="dashboard" style="margin-top:20px">
+              <h3 style="margin-bottom:8px">Recent runs</h3>
+              <div class="card" style="padding:12px">
+                <div class="status">
+                  <div class="row"><div><strong>Nightly Smoke</strong><div class="small">branch: main • scheduled</div></div><div class="badge" id="lastBadge">—</div></div>
+                  <div class="row small"><div>Last run</div><div id="lastRun">—</div></div>
+                  <div class="progress" aria-hidden><i id="progressBar"></i></div>
+                  <div class="small">Logs and artifacts are available in the CI workflow run.</div>
+                </div>
+              </div>
+            </section>
+
+          </section>
+        </main>
+
+        <aside class="card">
+          <h3 style="margin-top:0">Quick status</h3>
+          <div style="margin-top:12px">
+            <div class="small">Domain</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px"><div>cornercaseqalabs.com</div><div class="badge">HTTPS</div></div>
+          </div>
+
+          <div style="margin-top:14px">
+            <div class="small">Repo</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px"><div><a href="https://github.com/bolla12/bolla12.github.io" style="color:var(--accent)">bolla12/bolla12.github.io</a></div><div class="small">updated</div></div>
+          </div>
+
+          <div style="margin-top:16px">
+            <h4 style="margin:0 0 8px">Contact</h4>
+            <div class="small">Owner: <a href="https://github.com/bolla12" style="color:var(--accent)">@bolla12</a></div>
+            <div style="margin-top:8px"><button class="primary" id="openContact">Message</button></div>
+          </div>
+
+          <div style="margin-top:18px;color:var(--muted);font-size:13px">Note: This UI is static & client-side-demo only. To run real tests connect a backend/API and CI workflows.</div>
+        </aside>
+      </div>
+
+      <footer>
+        © Cornercase QA Labs — static demo site. For production features contact the owner.
+      </footer>
     </div>
+
+    <div class="modal" id="modal">
+      <div class="dialog">
+        <h3>Contact Maintainer</h3>
+        <div class="row-input">
+          <label class="small">Your email</label>
+          <input id="email" placeholder="you@example.com" />
+        </div>
+        <div class="row-input">
+          <label class="small">Message</label>
+          <textarea id="message" rows="4" placeholder="Hi — I want to learn about your QA services."></textarea>
+        </div>
+        <div style="display:flex;justify-content:flex-end;gap:8px">
+          <button id="closeModal">Cancel</button>
+          <button class="primary" id="sendBtn">Send (demo)</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const runBtn = document.getElementById('runBtn');
+      const progress = document.getElementById('progressBar');
+      const lastBadge = document.getElementById('lastBadge');
+      const lastRun = document.getElementById('lastRun');
+      const modal = document.getElementById('modal');
+      const openContact = document.getElementById('openContact');
+      const closeModal = document.getElementById('closeModal');
+      const sendBtn = document.getElementById('sendBtn');
+      const contactLink = document.getElementById('contactLink');
+
+      function nowUTC() { return new Date().toISOString().replace('T',' ').split('.')[0] + ' UTC' }
+
+      runBtn.addEventListener('click', async () => {
+        runBtn.disabled = true;
+        runBtn.textContent = 'Running...';
+        lastBadge.textContent = 'running';
+        lastBadge.style.color = '#fffbeb';
+        progress.style.width = '0%';
+        for (let i=0;i<=100;i+=10){
+          progress.style.width = i + '%';
+          await new Promise(r=>setTimeout(r,180));
+        }
+        // pseudo-random pass/fail
+        const pass = Math.random() > 0.18;
+        lastBadge.textContent = pass ? 'passed' : 'failed';
+        lastBadge.style.color = pass ? '#052026' : '#fee2e2';
+        lastBadge.style.background = pass ? 'linear-gradient(90deg,#34d399,#7dd3fc)' : 'rgba(255,120,120,0.12)';
+        lastRun.textContent = nowUTC();
+        runBtn.disabled = false;
+        runBtn.textContent = 'Run Smoke (demo)';
+      });
+
+      openContact.addEventListener('click',()=>{modal.style.display='flex'});
+      contactLink.addEventListener('click',(e)=>{e.preventDefault();modal.style.display='flex'});
+      closeModal.addEventListener('click',()=>{modal.style.display='none'});
+      sendBtn.addEventListener('click',()=>{
+        sendBtn.textContent = 'Sent (demo)';
+        setTimeout(()=>{modal.style.display='none';sendBtn.textContent='Send (demo)';},1200);
+      });
+
+      // initialize
+      lastBadge.textContent = 'no-run';
+      lastRun.textContent = '—';
+      progress.style.width = '0%';
+    </script>
   </body>
 </html>

@@ -1,10 +1,9 @@
-# Logo and banner
+Added placeholder SVG versions of the three images you provided and updated index.html to reference them so the visuals display reliably on the site. These placeholders are named:
 
-Added a new logo (assets/logo-new.svg), a banner (assets/banner-new.svg) and a repeating background pattern (assets/bg-pattern.svg), and updated index.html to use these assets and show a modern branded header and banner.
+- assets/image-2.svg (hero: team collaboration)
+- assets/image-3.svg (service thumbnail: QA/process icons)
+- assets/image-4.svg (case-study illustration)
 
-Files added:
-- assets/logo-new.svg
-- assets/banner-new.svg
-- assets/bg-pattern.svg
-
-If you'd like alternative color variants, a horizontal PNG/WebP export, or a favicon generated from the new logo, tell me which sizes and formats you prefer and I'll add them.
+Next steps (recommended):
+- If you want the actual raster photos (the exact images you uploaded) embedded as optimized WebP/PNG files, attach the high-resolution images you want used or confirm that I should extract the uploaded images from this chat and create WebP exports. I can then replace the SVG placeholders with the real optimized images (1200px hero, 600px thumbnails, 800px case-study) and commit them.
+- Or, tell me if you prefer I source professional stock photos instead.

@@ -37,7 +37,7 @@
 
       .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
       .service{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
-      .service svg{width:56px;height:44px;flex-shrink:0}
+      .service img{width:72px;height:56px;object-fit:cover;border-radius:6px}
 
       .right-col .meta-row{display:flex;justify-content:space-between;align-items:center}
       .company-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
@@ -70,7 +70,7 @@
       </header>
 
       <div class="hero-banner">
-        <img src="/assets/banner-new.svg" alt="Cornercase QA Labs banner" style="width:100%;height:auto;display:block" />
+        <img src="/assets/image-2.svg" alt="Team QA collaboration" style="width:100%;height:auto;display:block" />
       </div>
 
       <div class="main-grid">
@@ -102,23 +102,15 @@
                 <div class="card" style="padding:12px">
                   <div style="display:flex;align-items:center;justify-content:space-between">
                     <div>
-                      <div style="font-weight:700">Contact</div>
-                      <div class="small">hello@cornercaseqalabs.com</div>
+                      <div style="font-weight:700">Highlighted Case Study</div>
+                      <div class="small">Reduced regression test time from 6 hours to 30 minutes using Playwright parallelization and selective test selection.</div>
                     </div>
-                    <div class="badge">HTTPS</div>
+                    <div class="badge">Case Study</div>
                   </div>
 
-                  <div style="margin-top:12px" class="company-meta">
-                    <div class="meta-item"><div style="font-weight:700">Industry</div><div class="small">Software Testing</div></div>
-                    <div class="meta-item"><div style="font-weight:700">Headquarters</div><div class="small">Remote / Global</div></div>
-                    <div class="meta-item"><div style="font-weight:700">Employees</div><div class="small">5-20</div></div>
-                    <div class="meta-item"><div style="font-weight:700">Founded</div><div class="small">2024</div></div>
+                  <div style="margin-top:12px">
+                    <img src="/assets/image-4.svg" alt="Testing illustration" style="width:100%;border-radius:8px;" />
                   </div>
-                </div>
-
-                <div style="margin-top:12px" class="card">
-                  <div style="font-weight:700">Highlighted Case Study</div>
-                  <div class="small" style="margin-top:8px">Reduced regression test time from 6 hours to 30 minutes using Playwright parallelization and selective test selection.</div>
                 </div>
               </div>
             </div>
@@ -129,13 +121,7 @@
             <h3 style="margin-top:0">Services</h3>
             <div class="services-grid">
               <div class="service">
-                <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <rect width="64" height="48" rx="8" fill="#052a2a" />
-                  <g fill="#7dd3fc">
-                    <path d="M12 14h40v6H12z"/>
-                    <path d="M12 24h28v6H12z"/>
-                  </g>
-                </svg>
+                <img src="/assets/image-3.svg" alt="automation and QA icons"/>
                 <div>
                   <h4 style="margin:0 0 6px">Test Automation</h4>
                   <div class="small">Framework development, cross-browser automation, CI pipeline integration.</div>

@@ -1,1 +1,10 @@
-Updated index.html to use inline SVG illustrations for the hero and service thumbnails so images load reliably for all visitors (no external image hosting required). This also ensures the visuals are always visible and render fast. If you'd prefer photographic images instead, upload the exact images and I'll optimize them and store them in /assets/.
+# Logo and banner
+
+Added a new logo (assets/logo-new.svg), a banner (assets/banner-new.svg) and a repeating background pattern (assets/bg-pattern.svg), and updated index.html to use these assets and show a modern branded header and banner.
+
+Files added:
+- assets/logo-new.svg
+- assets/banner-new.svg
+- assets/bg-pattern.svg
+
+If you'd like alternative color variants, a horizontal PNG/WebP export, or a favicon generated from the new logo, tell me which sizes and formats you prefer and I'll add them.

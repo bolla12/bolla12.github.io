@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="lg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0ea5a4" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="40" fill="#053f3a" />
+  <!-- simplified gear + circuit logo -->
+  <g transform="translate(80,60) scale(0.9)" fill="none" stroke="url(#lg)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M168 36c-63 0-114 51-114 114s51 114 114 114"/>
+    <circle cx="168" cy="150" r="86" stroke-opacity="0.12" />
+    <path d="M218 58l54-24"/>
+    <circle cx="282" cy="34" r="9" fill="#e6eef8" stroke="none"/>
+    <path d="M220 118l54-6"/>
+    <circle cx="282" cy="112" r="9" fill="#e6eef8" stroke="none"/>
+    <path d="M220 178l54 24"/>
+    <circle cx="282" cy="206" r="9" fill="#e6eef8" stroke="none"/>
+  </g>
+  <text x="50%" y="440" font-family="Segoe UI, Roboto, Helvetica, Arial" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="700">cornercaseqalabs</text>
+</svg>

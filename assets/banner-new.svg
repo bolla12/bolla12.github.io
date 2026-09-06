@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360">
+  <defs>
+    <linearGradient id="bgrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#053f3a" />
+      <stop offset="100%" stop-color="#0b5260" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgrad)" />
+  <g transform="translate(48,36)">
+    <rect x="0" y="0" width="420" height="288" rx="18" fill="#062b2b" />
+    <!-- logo mark -->
+    <g transform="translate(36,24) scale(0.8)">
+      <path d="M168 36c-63 0-114 51-114 114s51 114 114 114" fill="none" stroke="#7dd3fc" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <g stroke="#7dd3fc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M220 58l54-24"/>
+        <circle cx="282" cy="34" r="8" fill="#e6eef8" stroke="none"/>
+        <path d="M220 118l54-6"/>
+        <circle cx="282" cy="112" r="8" fill="#e6eef8" stroke="none"/>
+        <path d="M220 178l54 24"/>
+        <circle cx="282" cy="206" r="8" fill="#e6eef8" stroke="none"/>
+      </g>
+    </g>
+
+    <text x="480" y="90" font-family="Segoe UI, Roboto, Helvetica, Arial" font-size="48" fill="#ffffff" font-weight="700">Cornercase QA Labs</text>
+    <text x="480" y="136" font-family="Segoe UI, Roboto, Helvetica, Arial" font-size="20" fill="#cbd5e1">Automation • Reporting • CI Integrations</text>
+
+    <g transform="translate(480,170)">
+      <rect width="620" height="86" rx="10" fill="rgba(255,255,255,0.03)" />
+      <text x="20" y="52" font-size="18" fill="#9aa7bf">End-to-end QA services, test automation, performance testing, security audits, and CI integration for modern product teams.</text>
+    </g>
+  </g>
+</svg>

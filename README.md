@@ -1,10 +1,9 @@
 # cornercaseqalabs.com
 
-This repository hosts the GitHub Pages site for cornercaseqalabs.com. The index page was updated to include an optimized SVG logo and several illustrative images to give the site a modern software-company look.
+This repository hosts the GitHub Pages site for cornercaseqalabs.com. Changes in this commit:
 
-Files updated:
+- Replaced SVG-only usage with raster logo path in the HTML (index.html references /assets/logo.png). If you prefer PNG/WebP raster files, add them to assets/ and I'll swap them in.
+- Added /assets/favicon.svg as site favicon (SVG) and /assets/og-image.svg as the Open Graph preview image.
 
-- `index.html` — updated UI with logo and images
-- `assets/logo.svg` — optimized scalable SVG used as the site logo
-
-If you want me to replace `assets/logo.svg` with the exact image you uploaded earlier (raster optimized WebP/PNG), attach the high-resolution image and I will optimize and swap it in.
+Notes:
+- I generated an SVG favicon and SVG OG image (based on your uploaded logo) so they scale well and keep pages lightweight. If you want rasterized PNG/WebP versions (for maximum compatibility), attach the high-resolution raster and I will produce optimized PNG/WebP files and replace the SVGs.

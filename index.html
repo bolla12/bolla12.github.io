@@ -434,47 +434,90 @@
             margin-bottom: 20px;
         }
 
-        .contact p {
+        .contact-intro {
             color: var(--gray);
             font-size: 1.1em;
             margin-bottom: 30px;
+            line-height: 1.8;
         }
 
-        .contact-info {
-            margin-bottom: 30px;
+        .contact-intro strong {
+            color: var(--primary);
         }
 
-        .contact-info p {
-            font-size: 1.1em;
+        /* Contact Form */
+        .contact-form {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--primary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
             color: var(--dark);
-            margin-bottom: 10px;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(240, 147, 251, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
-            flex-wrap: wrap;
         }
 
-        .social-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             border: none;
-            font-size: 1.2em;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .social-btn:hover {
-            transform: translateY(-5px);
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
         }
 
         /* Footer */
@@ -581,6 +624,14 @@
 
             .logo {
                 font-size: 1em;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 20px;
             }
         }
 
@@ -861,24 +912,61 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-info">
-                <p><strong>📧 Email:</strong> hello@cornercaseqalabs.com</p>
-                <p><strong>📞 Phone:</strong> Contact us for consultation</p>
-                <p><strong>🌐 Ready to improve your software quality?</strong> Let's discuss your QA testing needs.</p>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com" class="social-btn" title="GitHub">
-                    <span>🐙</span>
-                </a>
-                <a href="https://twitter.com" class="social-btn" title="Twitter">
-                    <span>𝕏</span>
-                </a>
-                <a href="https://linkedin.com" class="social-btn" title="LinkedIn">
-                    <span>💼</span>
-                </a>
-                <a href="mailto:hello@cornercaseqalabs.com" class="social-btn" title="Email">
-                    <span>✉️</span>
-                </a>
+            <p class="contact-intro">
+                <strong>Whether you need QA engineering support, comprehensive testing services, or expert consultation on your testing strategy — start here.</strong>
+            </p>
+            
+            <!-- Contact Form -->
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Choose a Service --</option>
+                        <option value="manual-testing">🎯 Manual Testing</option>
+                        <option value="test-automation">⚙️ Test Automation</option>
+                        <option value="performance-testing">⚡ Performance Testing</option>
+                        <option value="database-testing">🗄️ Database Testing</option>
+                        <option value="security-testing">🔒 Security Testing</option>
+                        <option value="accessibility-testing">♿ Accessibility Testing</option>
+                        <option value="consultation">📞 Consultation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Project Details</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your QA testing needs..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+
+            <div style="margin-top: 30px;">
+                <p style="color: var(--gray); font-size: 1em;">
+                    <strong style="color: var(--dark);">📧 Email:</strong> contactus@cornercaseqalabs.com
+                </p>
             </div>
         </section>
     </div>
@@ -924,6 +1012,29 @@
             el.style.transition = 'opacity 0.6s, transform 0.6s';
             observer.observe(el);
         });
+
+        // Handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+
+            // Log form data (in production, this would send to a server)
+            console.log('Form Submitted:', formData);
+            
+            // Show success message
+            alert('Thank you for your inquiry! We will contact you soon at ' + formData.email);
+            
+            // Reset form
+            event.target.reset();
+        }
     </script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolla12 - Full-Stack Developer & Tech Enthusiast</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>👨‍💻</text></svg>">
+    <title>Cornercase QA Labs - Professional QA & Testing Services</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🧪</text></svg>">
     <style>
         * {
             margin: 0;
@@ -49,7 +49,7 @@
         }
 
         .logo {
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
@@ -57,7 +57,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
@@ -66,6 +66,7 @@
             color: var(--dark);
             font-weight: 600;
             transition: color 0.3s;
+            font-size: 1em;
         }
 
         .nav-links a:hover {
@@ -89,7 +90,7 @@
         /* Hero Section */
         .hero {
             margin-top: 80px;
-            padding: 80px 2rem;
+            padding: 100px 2rem;
             text-align: center;
             color: white;
             animation: fadeInDown 0.8s ease-out;
@@ -116,7 +117,7 @@
 
         .hero h1 {
             font-size: 3.5em;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-weight: 800;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -124,7 +125,10 @@
         .hero p {
             font-size: 1.3em;
             opacity: 0.95;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-buttons {
@@ -221,8 +225,8 @@
             margin-bottom: 15px;
         }
 
-        /* Projects Section */
-        .projects {
+        /* Services Section */
+        .services {
             background: white;
             margin: 40px 0;
             border-radius: 20px;
@@ -230,19 +234,19 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
         }
 
-        .projects h2 {
+        .services h2 {
             color: var(--primary);
             font-size: 2em;
             margin-bottom: 40px;
         }
 
-        .project-grid {
+        .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .project-card {
+        .service-card {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             border-radius: 15px;
             padding: 30px;
@@ -251,22 +255,22 @@
             cursor: pointer;
         }
 
-        .project-card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
         }
 
-        .project-card h3 {
+        .service-card h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
 
-        .project-card p {
+        .service-card p {
             opacity: 0.9;
             margin-bottom: 15px;
         }
 
-        .project-tags {
+        .service-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -280,8 +284,8 @@
             font-weight: 600;
         }
 
-        /* Skills Section */
-        .skills {
+        /* QA Tools & Technologies Section */
+        .qa-tools {
             background: white;
             margin: 40px 0;
             border-radius: 20px;
@@ -289,19 +293,19 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
         }
 
-        .skills h2 {
+        .qa-tools h2 {
             color: var(--primary);
             font-size: 2em;
             margin-bottom: 40px;
         }
 
-        .skills-grid {
+        .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
         }
 
-        .skill-item {
+        .tool-item {
             background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
             padding: 20px;
             border-radius: 12px;
@@ -310,17 +314,17 @@
             transition: transform 0.3s;
         }
 
-        .skill-item:hover {
+        .tool-item:hover {
             transform: scale(1.05);
             border-color: var(--accent);
         }
 
-        .skill-icon {
+        .tool-icon {
             font-size: 2.5em;
             margin-bottom: 10px;
         }
 
-        .skill-item p {
+        .tool-item p {
             font-weight: 700;
             color: var(--dark);
         }
@@ -345,6 +349,16 @@
             color: var(--gray);
             font-size: 1.1em;
             margin-bottom: 30px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            color: var(--dark);
+            margin-bottom: 10px;
         }
 
         .social-links {
@@ -418,9 +432,14 @@
             }
 
             .nav-links {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 1rem;
-                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .nav-links a {
+                font-size: 0.9em;
             }
 
             .hero {
@@ -455,16 +474,20 @@
                 font-size: 1.8em;
             }
 
-            .about, .projects, .skills, .contact {
+            .about, .services, .qa-tools, .contact {
                 padding: 40px 20px;
             }
 
-            .project-grid {
+            .service-grid {
                 grid-template-columns: 1fr;
             }
 
-            .skills-grid {
+            .tools-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .logo {
+                font-size: 1em;
             }
         }
 
@@ -477,8 +500,16 @@
                 font-size: 1.5em;
             }
 
-            .skills-grid {
+            .tools-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.8em;
             }
         }
     </style>
@@ -486,23 +517,23 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo">bolla12</a>
+        <a href="#" class="logo">🧪 Cornercase QA Labs</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tools">QA Tools</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-avatar">👨‍💻</div>
-        <h1>Hi, I'm Bolla12</h1>
-        <p>Full-Stack Developer | Open Source Contributor | Tech Enthusiast</p>
+        <div class="hero-avatar">🧪</div>
+        <h1>Cornercase QA Labs</h1>
+        <p>Professional QA & Software Testing Services | Quality Assurance Excellence | Comprehensive Testing Solutions</p>
         <div class="cta-buttons">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a href="#services" class="btn btn-primary">Explore Services</a>
+            <a href="#contact" class="btn btn-secondary">Get Consultation</a>
         </div>
     </section>
 
@@ -510,94 +541,143 @@
     <div class="container">
         <!-- About Section -->
         <section id="about" class="about">
-            <h2>About Me</h2>
+            <h2>About Cornercase QA Labs</h2>
             <p>
-                👋 Welcome! I'm a passionate developer with expertise in full-stack web development, 
-                cloud technologies, and open-source contributions. I love solving complex problems 
-                and building elegant, user-centric solutions.
+                🧪 Welcome to Cornercase QA Labs – your trusted partner in quality assurance and software testing excellence. 
+                We specialize in comprehensive testing solutions designed to ensure your software products are robust, reliable, 
+                and ready for production.
             </p>
             <p>
-                With a strong foundation in JavaScript, web frameworks, and modern development practices, 
-                I'm constantly learning and exploring new technologies. I'm committed to writing clean, 
-                maintainable code and collaborating with talented teams.
+                With extensive expertise in manual testing, test automation, performance testing, database testing, and 
+                security testing, we help organizations identify and eliminate defects before they impact end users. 
+                Our QA professionals are committed to maintaining the highest standards of quality through meticulous 
+                testing processes and best practices.
             </p>
             <p>
-                When I'm not coding, you can find me contributing to open-source projects, 
-                exploring tech blogs, or working on side projects that fuel my passion for innovation.
+                We combine thorough manual testing with advanced automation frameworks to deliver comprehensive test coverage. 
+                Our team excels at creating test strategies, designing test cases, automating regression suites, and validating 
+                database integrity. Whether you need functional testing, performance benchmarking, or accessibility audits, 
+                Cornercase QA Labs delivers measurable results that enhance product quality and user satisfaction.
             </p>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>🚀 Project One</h3>
-                    <p>A full-stack web application built with modern technologies. Demonstrates API design, database management, and responsive UI implementation.</p>
-                    <div class="project-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Node.js</span>
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2 class="section-title">QA Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>🎯 Manual Testing</h3>
+                    <p>Comprehensive manual testing services including functional testing, regression testing, and exploratory testing. Our QA experts validate all user workflows and edge cases.</p>
+                    <div class="service-tags">
+                        <span class="tag">Functional Testing</span>
+                        <span class="tag">Regression Testing</span>
+                        <span class="tag">Exploratory Testing</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>💡 Project Two</h3>
-                    <p>An innovative solution that showcases problem-solving skills and attention to detail. Built with best practices and clean code principles.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">CSS</span>
+                <div class="service-card">
+                    <h3>⚙️ Test Automation</h3>
+                    <p>Advanced test automation frameworks for web and mobile applications. Accelerate testing cycles with reliable, maintainable automation scripts and CI/CD integration.</p>
+                    <div class="service-tags">
+                        <span class="tag">Selenium</span>
+                        <span class="tag">Playwright</span>
+                        <span class="tag">Cypress</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>🎯 Project Three</h3>
-                    <p>Contributed to an open-source project that helps developers build better applications. Merged multiple PRs and fixed critical bugs.</p>
-                    <div class="project-tags">
-                        <span class="tag">Open Source</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">Collaboration</span>
+                <div class="service-card">
+                    <h3>⚡ Performance Testing</h3>
+                    <p>Load testing, stress testing, and performance analysis to ensure your applications can handle real-world traffic. Detailed performance reports with optimization recommendations.</p>
+                    <div class="service-tags">
+                        <span class="tag">Load Testing</span>
+                        <span class="tag">Stress Testing</span>
+                        <span class="tag">Performance Analysis</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <h3>🗄️ Database Testing</h3>
+                    <p>Comprehensive database validation including data integrity checks, schema validation, and database performance testing across all major SQL and NoSQL platforms.</p>
+                    <div class="service-tags">
+                        <span class="tag">Data Validation</span>
+                        <span class="tag">Schema Testing</span>
+                        <span class="tag">Query Performance</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <h3>🔒 Security Testing</h3>
+                    <p>Vulnerability assessments, security scanning, and penetration testing to identify and remediate security risks before they become critical issues.</p>
+                    <div class="service-tags">
+                        <span class="tag">Security Scanning</span>
+                        <span class="tag">Vulnerability Assessment</span>
+                        <span class="tag">Penetration Testing</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <h3>♿ Accessibility Testing</h3>
+                    <p>WCAG compliance audits and accessibility testing to ensure your applications are inclusive and accessible to all users, including those with disabilities.</p>
+                    <div class="service-tags">
+                        <span class="tag">WCAG Compliance</span>
+                        <span class="tag">Accessibility Audit</span>
+                        <span class="tag">Assistive Tech Testing</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">⚙️</div>
-                    <p>JavaScript</p>
+        <!-- QA Tools & Technologies Section -->
+        <section id="tools" class="qa-tools">
+            <h2 class="section-title">QA Technologies & Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">🤖</div>
+                    <p>Selenium</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🎨</div>
-                    <p>Vue.js</p>
+                <div class="tool-item">
+                    <div class="tool-icon">🎭</div>
+                    <p>Playwright</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-icon">⚛️</div>
-                    <p>React</p>
+                <div class="tool-item">
+                    <div class="tool-icon">🌳</div>
+                    <p>Cypress</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🔧</div>
-                    <p>Node.js</p>
+                <div class="tool-item">
+                    <div class="tool-icon">📊</div>
+                    <p>JMeter</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🗄️</div>
-                    <p>Databases</p>
+                <div class="tool-item">
+                    <div class="tool-icon">🔧</div>
+                    <p>Postman API Testing</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-icon">☁️</div>
-                    <p>Cloud</p>
+                <div class="tool-item">
+                    <div class="tool-icon">🗄️</div>
+                    <p>SQL Testing</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🐙</div>
-                    <p>Git & GitHub</p>
+                <div class="tool-item">
+                    <div class="tool-icon">📈</div>
+                    <p>LoadRunner</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-icon">📱</div>
-                    <p>Responsive Design</p>
+                <div class="tool-item">
+                    <div class="tool-icon">🧪</div>
+                    <p>TestNG/JUnit</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">📱</div>
+                    <p>Appium</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">🔍</div>
+                    <p>OWASP</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">📝</div>
+                    <p>Test Management</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">🔄</div>
+                    <p>CI/CD Integration</p>
                 </div>
             </div>
         </section>
@@ -605,9 +685,13 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <h2 class="section-title">Get In Touch</h2>
-            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> hello@cornercaseqalabs.com</p>
+                <p><strong>📞 Phone:</strong> Contact us for consultation</p>
+                <p><strong>🌐 Ready to improve your software quality?</strong> Let's discuss your QA testing needs.</p>
+            </div>
             <div class="social-links">
-                <a href="https://github.com/bolla12" class="social-btn" title="GitHub">
+                <a href="https://github.com" class="social-btn" title="GitHub">
                     <span>🐙</span>
                 </a>
                 <a href="https://twitter.com" class="social-btn" title="Twitter">
@@ -616,7 +700,7 @@
                 <a href="https://linkedin.com" class="social-btn" title="LinkedIn">
                     <span>💼</span>
                 </a>
-                <a href="mailto:hello@example.com" class="social-btn" title="Email">
+                <a href="mailto:hello@cornercaseqalabs.com" class="social-btn" title="Email">
                     <span>✉️</span>
                 </a>
             </div>
@@ -625,8 +709,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Bolla12. All rights reserved.</p>
-        <p>Built with passion and modern web technologies 🚀</p>
+        <p>&copy; 2024 Cornercase QA Labs. All rights reserved.</p>
+        <p>Professional Quality Assurance & Software Testing Excellence 🧪</p>
     </footer>
 
     <script>
@@ -658,7 +742,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.project-card, .skill-item').forEach(el => {
+        document.querySelectorAll('.service-card, .tool-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s, transform 0.6s';

@@ -1,9 +1,14 @@
-Added placeholder SVG versions of the three images you provided and updated index.html to reference them so the visuals display reliably on the site. These placeholders are named:
+# Cornercase QA Labs (Jekyll site)
 
-- assets/image-2.svg (hero: team collaboration)
-- assets/image-3.svg (service thumbnail: QA/process icons)
-- assets/image-4.svg (case-study illustration)
+This repo now uses a minimal Jekyll structure so you can add posts and reuse layouts. Files added by the conversion:
 
-Next steps (recommended):
-- If you want the actual raster photos (the exact images you uploaded) embedded as optimized WebP/PNG files, attach the high-resolution images you want used or confirm that I should extract the uploaded images from this chat and create WebP exports. I can then replace the SVG placeholders with the real optimized images (1200px hero, 600px thumbnails, 800px case-study) and commit them.
-- Or, tell me if you prefer I source professional stock photos instead.
+- _config.yml — site configuration
+- _layouts/default.html — main HTML layout used by pages/posts
+- _includes/head.html — head meta tags and CSS link
+- assets/css/main.css — site styles
+- index.md — homepage using the default layout (includes the hero gallery and services)
+- _posts/2026-09-07-welcome.md — sample post
+
+Notes:
+- The site keeps the existing assets in /assets/ (logo/banner/background/images). I did not change those.
+- To preview locally: install Ruby + Jekyll, run `bundle exec jekyll serve` in the repo root, then open http://127.0.0.1:4000

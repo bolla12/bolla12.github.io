@@ -1,0 +1,10 @@
+title: Cornercase QA Labs
+email: hello@cornercaseqalabs.com
+url: "https://cornercaseqalabs.com"
+baseurl: ""
+description: "QA, test automation, reporting and CI integration"
+markdown: kramdown
+permalink: /:path/
+
+# Build settings
+exclude: [node_modules, vendor, Gemfile, Gemfile.lock]
